@@ -1,0 +1,43 @@
+<!-- applicants.ejs -->
+<h1 class="mt-5 mb-4 header">My Applications</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Resume</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% applicants.forEach(applicant => { %>
+            <tr>
+                <th scope="row">
+                    <%= applicant.id %>
+                </th>
+                <td>
+                    <%= applicant.name %>
+                </td>
+                <td>
+                    <%= applicant.mobile %>
+                </td>
+                <td>
+                    <%= applicant.address %>
+                </td>
+                <td>
+                    <!-- Assuming you have a field named "resumePath" in your JobApplicant -->
+                    <a href="/download-resume/<%= applicant.resumeFilename %>" target="_blank" rel="noopener noreferrer">
+                        View Resume
+                     </a>
+                </td>
+                <td>
+                    <!-- Add your specific actions or links for each applicant -->
+                    <a href="/update-applicant/<%= applicant.id %>" class="btn btn-warning">Update</a>
+                    <button class="btn btn-danger" onclick="deleteApplicant('<%= applicant.id %>')">Delete</button>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

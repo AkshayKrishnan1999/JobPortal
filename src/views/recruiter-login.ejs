@@ -1,0 +1,23 @@
+<body style="background-color: aquamarine;">
+<h1 class="mt-5 mb-4">Recruiter Login</h1>
+
+<%if(errorMessage){ %>
+    <div class="alert alert-danger" role="alert">
+        <%= errorMessage %>
+    </div>
+    <%}%>
+
+<form action="/recruiterlogin" method="post">
+    
+    <div class="mb-3" >
+        <label for="email" class="form-label" style="font-family: Georgia;">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login as a Recruiter</button>
+    <a class="btn btn-primary" href="/register">Register as Recruiter</a>
+</form>
+</body>

@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="text-center mb-5">Available Jobs</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <% jobs.forEach(job => { %>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><%= job.name %></h5>
+              <p class="card-text"><%= job.desc %></p>
+              <span class="text-muted"><%job.salary %></span>
+              <br>
+              <a href="/apply-for-job?jobId=<%= job.id %>" class="btn btn-primary">Apply</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+  

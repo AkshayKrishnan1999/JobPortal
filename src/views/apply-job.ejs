@@ -1,0 +1,34 @@
+<!-- views/applyForJob.ejs -->
+
+<div class="container">
+    <h1 class="mt-5 mb-4">Apply for Job</h1>
+    <p class="lead">Job ID: <%= jobId %></p>
+  
+    <form action="/submit-application" method="post" class="mb-5">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="resume" class="form-label">Resume:</label>
+        <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile Number:</label>
+        <input type="tel" class="form-control" id="mobile" name="mobile" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="address" class="form-label">Address:</label>
+        <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+      </div>
+  
+      <!-- Other form fields can be added here -->
+  
+      <input type="hidden" name="jobId" value="<%= jobId %>">
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+  </div>
+  

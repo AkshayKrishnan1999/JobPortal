@@ -1,0 +1,41 @@
+<h1 class="mt-5 mb-4 header">Jobs</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Resume</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% jobs.forEach(job => { %>
+            <tr>
+                <th scope="row">
+                    <%= job.id %>
+                </th>
+                <td>
+                    <%= job.name %>
+                </td>
+                <td>
+                    <%= job.desc %>
+                </td>
+                <td>
+                    <%= job.salary %>
+                </td>
+                <td>
+                    <!-- Assuming you have a field named "resumePath" in your JobModel -->
+                    <a href="/download-resume/<%= job.resumeFilename %>" target="_blank" rel="noopener noreferrer">
+                        View Resume
+                     </a>
+                </td>
+                <td>
+                    <a href="/update-job/<%= job.id %>" class="btn btn-warning">Update</a>
+                    <button class="btn btn-danger" onclick="deleteJob('<%= job.id %>')">Delete</button>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
