@@ -1,32 +1,43 @@
+# Job Portal Website
 
-**Job Portal Website:**
 This repository contains the code for a simple job portal website with an in-memory array as the data source. The front end is rendered using HTML, CSS, and Bootstrap, utilizing EJS templates. The application follows the Model-View-Controller (MVC) architecture to maintain a clean and organized codebase.
 
-Features
-In-Memory Array: The website uses an in-memory array to store job data, allowing for quick and easy testing and development without the need for a database.
+## Features
 
-EJS Templates: The front end is designed using EJS templates, making it dynamic and easy to update. EJS allows for seamless integration of JavaScript within HTML, enhancing the overall user experience.
+- **In-Memory Array:** The website uses an in-memory array to store job data, allowing for quick and easy testing and development without the need for a database.
 
-Bootstrap for Responsive Design: Bootstrap is incorporated to ensure a responsive and visually appealing design across various devices and screen sizes.
+- **EJS Templates:** The front end is designed using EJS templates, making it dynamic and easy to update. EJS allows for seamless integration of JavaScript within HTML, enhancing the overall user experience.
 
-MVC Architecture: The application is structured following the Model-View-Controller architecture. This separation of concerns enhances maintainability and scalability.
+- **Bootstrap for Responsive Design:** Bootstrap is incorporated to ensure a responsive and visually appealing design across various devices and screen sizes.
 
-Project Structure
-views Folder: Contains the EJS templates for rendering the front end.
+- **MVC Architecture:** The application is structured following the Model-View-Controller architecture. This separation of concerns enhances maintainability and scalability.
 
-public Folder: Houses static assets such as CSS files and client-side JavaScript.
+## Project Structure
 
-controllers Folder: Manages the application logic and handles user inputs.
+- **`views` Folder:** Contains the EJS templates for rendering the front end.
 
-models Folder: Defines the data models and interacts with the in-memory array.
+- **`public` Folder:** Houses static assets such as CSS files and client-side JavaScript.
 
-app.js File: The main entry point of the application where the server is configured and routes are defined.
+- **`controllers` Folder:** Manages the application logic and handles user inputs.
 
-Getting Started
-Clone the repository: git clone https://github.com/your-username/job-portal.git
-Navigate to the project directory: cd job-portal
-Install dependencies: npm install
-Run the application: node app.js
-Open your browser and visit http://localhost:3000 to view the job portal website.
-Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow the contribution guidelines.
+- **`models` Folder:** Defines the data models and interacts with the in-memory array.
+
+- **`app.js` File:** The main entry point of the application where the server is configured and routes are defined.
+
+## Getting Started
+
+1. Clone the repository: `git clone https://github.com/your-username/job-portal.git`
+2. Navigate to the project directory: `cd job-portal`
+3. Install dependencies: `npm install`
+4. Run the application: `node app.js`
+5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the job portal website.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow the [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to explore the code, suggest improvements, and contribute to making this job portal website even better!
