@@ -1,5 +1,5 @@
 
-Job Portal Website
+**Job Portal Website:**
 This repository contains the code for a simple job portal website with an in-memory array as the data source. The front end is rendered using HTML, CSS, and Bootstrap, utilizing EJS templates. The application follows the Model-View-Controller (MVC) architecture to maintain a clean and organized codebase.
 
 Features
